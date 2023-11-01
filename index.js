@@ -1,6 +1,9 @@
 const express = require("express")
-const fs = require("fs");
+// const fs = require("fs");
+const cors = require("cors")
+require("dotenv").config();
 const app=express()
+app.use(cors({origin:process.env.FRONTEND_URL}))
 function logRequestInfo(req, res, next) {
     console.log(`Request received at ${new Date()} for path: ${req.path}`);
     next();
