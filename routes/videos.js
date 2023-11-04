@@ -18,12 +18,12 @@ router.post("/",function(req,res){
     const vid = fs.readFileSync("./data/videos.json")
 const vidParsed = JSON.parse(vid);
     const {title, description} = req.body;
-    const img = express.static("./images/Upload-video-preview.jpg")
+    // const img = express.static("./images/Upload-video-preview.jpg")
     const newVid = {
         id:uuid(),
         title:title,
         description:description,
-        image:img
+        image:"./images/Upload-video-preview.jpg"
     }
     console.log(newVid)
     vidParsed.push(newVid)
