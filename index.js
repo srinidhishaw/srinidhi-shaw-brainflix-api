@@ -22,6 +22,3 @@ app.use("/videos",vidRoute)
 app.listen(PORT, function(){
   console.log("listening on port 8080")
 })
-// app.get("/videos",function(req,res){
-//     res.send("hi")
-// })
